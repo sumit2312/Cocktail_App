@@ -31,7 +31,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Colors.pink[200],
       appBar: AppBar(
-        title: Text("New App"),
+        title: Text("Cocktail App"),
         elevation: 0.5,
         backgroundColor: Colors.pink[300],
       ),
@@ -39,15 +39,23 @@ class _HomepageState extends State<Homepage> {
         child: res!=null ? ListView.builder(
           itemCount: drinks.length,
           itemBuilder: (context,index){
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "${drinks[index]["strDrink"]}",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),),
-            ); 
+            var drink = drinks[index];
+            return ListTile(
+              leading: CircleAvatar(backgroundImage: NetworkImage(drink["strDrinkThumb"]),),
+              title: Text(
+                  "${drink["strDrink"]}",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+                subtitle: Text(
+                  "${drink["idDrink"]}",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+            );
           },
         ):CircularProgressIndicator(backgroundColor: Colors.white,)
 
