@@ -1,5 +1,5 @@
 # Cocktail_App
 
-![alt text](./assets/View1.png)
+<img src="./assets/View1.png" height="300">
 
-![alt text](./assets/View2.png)
+<img src="./assets/View2.png" height="300">
