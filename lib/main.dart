@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_new/homepage.dart';
 // import 'package:flutter/src/material/colors.dart' show Colors;
 
+const Color myColor = Colors.brown;
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: "Flutter App",
           theme: ThemeData(
-            primarySwatch: Colors.pink,
+            primarySwatch: myColor,
             accentColor: Colors.cyan,
             buttonTheme: ButtonThemeData(
               buttonColor: cyan
